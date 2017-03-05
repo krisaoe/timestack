@@ -23,6 +23,7 @@ export default {
     extensions: ['.js', '.jsx'],
   },
   devtool: isProd ? false : 'source-map',
+  stats: 'minimal',
   devServer: {
     port: WDS_PORT,
     hot: true,

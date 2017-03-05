@@ -31,6 +31,8 @@
     "react-dom": "^15.4.2",
     "react-hot-loader": "next",
     "react-redux": "^5.0.3",
+    "react-router": "next",
+    "react-router-dom": "next",
     "redux": "^3.6.0",
     "redux-actions": "2.0.1",
     "redux-thunk": "^2.2.0"
@@ -41,8 +43,8 @@
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.3.2",
     "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.2.0",
     "babel-preset-flow": "^6.23.0",
-    "babel-preset-latest": "^6.22.0",
     "babel-preset-react": "^6.23.0",
     "cross-env": "^3.2.3",
     "eslint": "^3.16.1",
