@@ -14,6 +14,7 @@ import {
 import thunkMiddleware from 'redux-thunk'
 import {BrowserRouter} from 'react-router-dom'
 
+import setUpSocket from './socket'
 import App from '../shared/app'
 import helloReducer from '../shared/reducer/hello'
 import {APP_CONTAINER_SELECTOR} from '../shared/config'
@@ -55,3 +56,4 @@ if (module.hot) {
     ReactDOM.render(wrapApp(NextApp, store), rootEl)
   })
 }
+setUpSocket(store)
