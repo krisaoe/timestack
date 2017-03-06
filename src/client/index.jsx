@@ -1,5 +1,8 @@
 import 'babel-polyfill'
 
+import $ from 'jquery'
+import Tether from 'tether'
+
 import * as Immutable from 'immutable'
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -17,8 +20,12 @@ import {BrowserRouter} from 'react-router-dom'
 import setUpSocket from './socket'
 import App from '../shared/app'
 import helloReducer from '../shared/reducer/hello'
-import {APP_CONTAINER_SELECTOR} from '../shared/config'
+import {APP_CONTAINER_SELECTOR, JSS_SSR_SELECTOR} from '../shared/config'
 import {isProd} from '../shared/util'
+
+window.jQuery = $
+window.Tether = Tether
+require('bootstrap')
 
 /* eslint-disable no-underscore-dangle */
 const composeEnhancers = (isProd ? null : window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose
@@ -48,7 +55,6 @@ const wrapApp = (AppComponent, reduxStore) =>
 ReactDOM.render(wrapApp(App, store), rootEl)
 
 if (module.hot) {
-  // flow-disable-next-line
   module.hot.accept('../shared/app', () => {
     /* eslint-disable global-require */
     const NextApp = require('../shared/app').default
@@ -56,4 +62,8 @@ if (module.hot) {
     ReactDOM.render(wrapApp(NextApp, store), rootEl)
   })
 }
+
+const jssServerSide = document.querySelector(JSS_SSR_SELECTOR)
+jssServerSide.parentNode.removeChild(jssServerSide)
+
 setUpSocket(store)

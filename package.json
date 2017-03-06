@@ -1,6 +1,6 @@
 {
-  "name": "timEnew",
-  "version": "0.11.0",
+  "name": "timestack",
+  "version": "0.3.0",
   "main": "index.js",
   "scripts": {
     "s": "yarn start",
@@ -19,18 +19,21 @@
   "alias": {
     "redux-actions": "redux-actions"
   },
-  "repository": "git@github.com:krisaoe/timEnew",
+  "repository": "git@github.com:krisaoe/timestack",
   "author": "krisaoe <krisopowell@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "bootstrap": "4.0.0-alpha.6",
     "compression": "^1.6.2",
     "express": "^4.15.0",
     "immutable": "^3.8.1",
     "isomorphic-fetch": "^2.2.1",
+    "jquery": "^3.1.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-helmet": "^4.0.0",
     "react-hot-loader": "next",
+    "react-jss": "^5.3.0",
     "react-redux": "^5.0.3",
     "react-router": "next",
     "react-router-dom": "next",
@@ -38,7 +41,8 @@
     "redux-actions": "2.0.1",
     "redux-thunk": "^2.2.0",
     "socket.io": "^1.7.3",
-    "socket.io-client": "^1.7.3"
+    "socket.io-client": "^1.7.3",
+    "tether": "^1.4.0"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
