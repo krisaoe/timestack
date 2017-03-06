@@ -16,7 +16,7 @@ export default {
   },
   module: {
     rules: [
-      { test: /\.(jsx|js)$/, use: 'babel-loader', exclude: /node_modules/ },
+      {test: /\.(jsx|js)$/, use: 'babel-loader', exclude: /node_modules/},
     ],
   },
   resolve: {

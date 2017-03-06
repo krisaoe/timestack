@@ -12,7 +12,7 @@ const initStore = (plainPartialState) => {
       .merge(Immutable.fromJS(plainPartialState.hello))
   }
 
-  return createStore(combineReducers({ hello: helloReducer }),
+  return createStore(combineReducers({hello: helloReducer}),
     preloadedState, applyMiddleware(thunkMiddleware))
 }
 

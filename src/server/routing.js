@@ -1,20 +1,22 @@
+// @flow
+
 import {
   homePage,
   helloPage,
   helloAsyncPage,
-  helloEndpoint
+  helloEndpoint,
 } from './controller'
 
 import {
   HOME_PAGE_ROUTE,
   HELLO_PAGE_ROUTE,
   HELLO_ASYNC_PAGE_ROUTE,
-  helloEndpointRoute
+  helloEndpointRoute,
 } from '../shared/routes'
 
 import renderApp from './render-app'
 
-export default (app) => {
+export default (app: Object) => {
   app.get(HOME_PAGE_ROUTE, (req, res) => {
     res.send(renderApp(req.url, homePage()))
   })

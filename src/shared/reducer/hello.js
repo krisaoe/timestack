@@ -4,7 +4,7 @@ import {
   SAY_HELLO,
   SAY_HELLO_ASYNC_REQUEST,
   SAY_HELLO_ASYNC_SUCCESS,
-  SAY_HELLO_ASYNC_FAILURE
+  SAY_HELLO_ASYNC_FAILURE,
 } from '../action/hello'
 
 const initialState = Immutable.fromJS({

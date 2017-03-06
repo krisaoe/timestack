@@ -1,3 +1,4 @@
+// @flow
 /* eslint-disable import/prefer-default-export */
 
 import 'isomorphic-fetch'
@@ -15,9 +16,9 @@ export const sayHelloAsyncRequest = createAction(SAY_HELLO_ASYNC_REQUEST)
 export const sayHelloAsyncSuccess = createAction(SAY_HELLO_ASYNC_SUCCESS)
 export const sayHelloAsyncFailure = createAction(SAY_HELLO_ASYNC_FAILURE)
 
-export const sayHelloAsync = (num) => (dispatch) => {
+export const sayHelloAsync = (num: number) => (dispatch: Function) => {
   dispatch(sayHelloAsyncRequest())
-  return fetch(helloEndpointRoute(num), { method: 'GET' })
+  return fetch(helloEndpointRoute(num), {method: 'GET'})
     .then((res) => {
       if (!res.ok) throw Error(res.statusText)
       return res.json()

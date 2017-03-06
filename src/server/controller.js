@@ -1,13 +1,15 @@
+// @flow
+
 export const homePage = () => null
 
 export const helloPage = () => ({
-  hello: { message: 'Server-side preloaded message here' },
+  hello: {message: 'Server-side preloaded message here'},
 })
 
 export const helloAsyncPage = () => ({
-  hello: { messageAsync: 'Server-side preloaded message for async page here' },
+  hello: {messageAsync: 'Server-side preloaded message for async page here'},
 })
 
-export const helloEndpoint = (num) => ({
+export const helloEndpoint = (num: number) => ({
   serverMessage: `Hello from the server! (received ${num})`,
 })
